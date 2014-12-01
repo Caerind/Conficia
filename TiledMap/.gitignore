@@ -1,9 +1,0 @@
-.git
-bin/
-obj/
-temp/
-*.cbp
-*.layout
-*.depend
-temp*
-build/
