@@ -9,6 +9,8 @@ int main()
 {
     sfg::SFGUI test;
 
+    sf::sleep(sf::seconds(10));
+
 
     return EXIT_SUCCESS;
 }

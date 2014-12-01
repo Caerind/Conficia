@@ -84,4 +84,22 @@ Version& System::getVersion()
     return instance().mVersion;
 }
 
+MusicPlayer& System::getMusicPlayer()
+{
+    if (Instance == nullptr)
+    {
+        init();
+    }
+    return instance().mMusics;
+}
+
+SoundPlayer& System::getSoundPlayer()
+{
+    if (Instance == nullptr)
+    {
+        init();
+    }
+    return instance().mSounds;
+}
+
 } // namespace app

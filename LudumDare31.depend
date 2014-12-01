@@ -216,12 +216,14 @@
 	"System.hpp"
 	"StateManager.hpp"
 
-1414761848 /media/DD/C++/Projets/LudumDare31/Application/System.hpp
+1417459565 /media/DD/C++/Projets/LudumDare31/Application/System.hpp
 	"Window.hpp"
 	"ResourceManager.hpp"
 	"Clock.hpp"
 	"Log.hpp"
 	"Version.hpp"
+	"../Audio/MusicPlayer.hpp"
+	"../Audio/SoundPlayer.hpp"
 
 1414761867 /media/DD/C++/Projets/LudumDare31/Application/Window.hpp
 	<memory>
@@ -326,7 +328,7 @@
 	"StateManager.hpp"
 	<cassert>
 
-1414761752 source:/media/DD/C++/Projets/LudumDare31/Application/System.cpp
+1417459648 source:/media/DD/C++/Projets/LudumDare31/Application/System.cpp
 	"System.hpp"
 
 1414761756 source:/media/DD/C++/Projets/LudumDare31/Application/Version.cpp
@@ -736,4 +738,13 @@
 1417453595 source:/media/DD/C++/Projets/LudumDare31/TiledMap/Tileset.cpp
 	"Tileset.hpp"
 	"Manager.hpp"
+
+1417459281 source:/media/DD/C++/Projets/LudumDare31/Application/Camera.cpp
+	"Camera.hpp"
+
+1417459178 /media/DD/C++/Projets/LudumDare31/Application/Camera.hpp
+	<memory>
+	<SFML/Graphics/View.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Rect.hpp>
 

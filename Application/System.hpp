@@ -6,6 +6,8 @@
 #include "Clock.hpp"
 #include "Log.hpp"
 #include "Version.hpp"
+#include "../Audio/MusicPlayer.hpp"
+#include "../Audio/SoundPlayer.hpp"
 
 namespace app
 {
@@ -23,6 +25,8 @@ class System
         static Clock& getClock();
         static Log& getLog();
         static Version& getVersion();
+        static MusicPlayer& getMusicPlayer();
+        static SoundPlayer& getSoundPlayer();
 
     protected:
         System(std::string const& appName = "");
@@ -36,6 +40,8 @@ class System
         Clock mClock;
         Log mLog;
         Version mVersion;
+        MusicPlayer mMusics;
+        SoundPlayer mSounds;
 };
 
 } // namespace app
