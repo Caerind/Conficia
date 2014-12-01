@@ -5,8 +5,10 @@
 1417303759 /media/DD/C++/Projets/LudumDare31/Audio/MusicPlayer.hpp
 	<SFML/Audio/Music.hpp>
 
-1417449551 source:/media/DD/C++/Projets/LudumDare31/main.cpp
+1417456057 source:/media/DD/C++/Projets/LudumDare31/main.cpp
 	<SFML/Graphics.hpp>
+	<Thor/Animations.hpp>
+	<Thor/Resources.hpp>
 
 1415388542 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/extlibs/pugixml/pugixml.cpp
 	"pugixml.hpp"
@@ -543,4 +545,13 @@
 	<map>
 	<string>
 	<SFML/Audio/SoundBuffer.hpp>
+
+1417454938 source:/media/DD/C++/Projets/LudumDare31/Audio/SoundPlayer.cpp
+	"SoundPlayer.hpp"
+
+1417454989 /media/DD/C++/Projets/LudumDare31/Audio/SoundPlayer.hpp
+	<memory>
+	<map>
+	<SFML/Audio/Sound.hpp>
+	"SoundBufferManager.hpp"
 
