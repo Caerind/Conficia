@@ -2,12 +2,10 @@
 #define APP_RESOURCEMANAGER_HPP
 
 #include <map>
-#include <memory>
+#include <cassert>
 
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Texture.hpp>
-
-#include <Thor/Resources.hpp>
 
 namespace app
 {
@@ -17,36 +15,18 @@ class ResourceManager
     public:
         ResourceManager();
 
-        template<typename T>
-        T& get(std::string const& name);
+        bool loadTexture(std::string const& name, std::string const& filename);
+        sf::Texture& getTexture(std::string const& name);
+        void releaseTexture(std::string const& name);
 
-        template<typename T>
-        std::shared_ptr<T> getPtr(std::string const& name);
-
-        template<typename T>
-        void release(std::string const& name);
+        bool loadFont(std::string const& name, std::string const& filename);
+        sf::Font& getFont(std::string const& name);
+        void releaseFont(std::string const& name);
 
     protected:
-        thor::MultiResourceCache mCache;
+        std::map<std::string,sf::Texture> mTextures;
+        std::map<std::string,sf::Font> mFonts;
 };
-
-template<typename T>
-T& ResourceManager::get(std::string const& name)
-{
-    return *mCache.acquire(thor::Resources::fromFile<T>(name));
-}
-
-template<typename T>
-std::shared_ptr<T> ResourceManager::getPtr(std::string const& name)
-{
-    return mCache.acquire(thor::Resources::fromFile<T>(name));
-}
-
-template<typename T>
-void ResourceManager::release(std::string const& name)
-{
-    mCache.release(thor::Resources::fromFile<T>(name));
-}
 
 } // namespace app
 

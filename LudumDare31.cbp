@@ -42,8 +42,6 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Linker>
-			<Add library="sfgui" />
-			<Add library="thor" />
 			<Add library="z" />
 			<Add library="sfml-graphics" />
 			<Add library="sfml-network" />
