@@ -7,4 +7,5 @@ If you want to use this code, you will need :
 
 - SFML
 - Thor
+- SFGUI
 - zlib
