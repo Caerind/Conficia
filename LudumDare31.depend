@@ -1,0 +1,204 @@
+# depslib dependency file v1.0
+1417304101 source:/media/DD/C++/Projets/LudumDare31/Audio/MusicPlayer.cpp
+	"MusicPlayer.hpp"
+
+1417303759 /media/DD/C++/Projets/LudumDare31/Audio/MusicPlayer.hpp
+	<SFML/Audio/Music.hpp>
+
+1417449551 source:/media/DD/C++/Projets/LudumDare31/main.cpp
+	<SFML/Graphics.hpp>
+
+1415388542 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/extlibs/pugixml/pugixml.cpp
+	"pugixml.hpp"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<wchar.h>
+	<math.h>
+	<float.h>
+	<setjmp.h>
+	<istream>
+	<ostream>
+	<string>
+	<new>
+	<stdint.h>
+
+1415388542 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/extlibs/pugixml/pugixml.hpp
+	"pugiconfig.hpp"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+
+1415388542 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/extlibs/pugixml/pugiconfig.hpp
+
+1417030556 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/ILayer.cpp
+	"../include/ILayer.hpp"
+
+1417029964 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/ILayer.hpp
+	<memory>
+	<string>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Rect.hpp>
+	"Properties.hpp"
+
+1416861528 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Properties.hpp
+	<map>
+	<string>
+	<sstream>
+
+1417028032 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Image.cpp
+	"../include/Image.hpp"
+	"../include/Manager.hpp"
+
+1417027981 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Image.hpp
+	<memory>
+	<sstream>
+	<string>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Texture.hpp>
+
+1417133384 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Manager.hpp
+	<map>
+	<memory>
+	<string>
+	<vector>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Rect.hpp>
+	"Map.hpp"
+
+1417133590 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Map.hpp
+	<fstream>
+	<map>
+	<memory>
+	<string>
+	<vector>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	"../extlibs/pugixml/pugixml.hpp"
+	"ILayer.hpp"
+	"ImageLayer.hpp"
+	"Layer.hpp"
+	"Object.hpp"
+	"ObjectGroup.hpp"
+	"ParserUtils.hpp"
+	"Properties.hpp"
+	"Tileset.hpp"
+
+1417101468 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/ImageLayer.hpp
+	<SFML/Graphics/Vertex.hpp>
+	"ILayer.hpp"
+	"Image.hpp"
+
+1417388094 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Layer.hpp
+	<map>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	"ILayer.hpp"
+	"Tileset.hpp"
+	"Tile.hpp"
+
+1417028003 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Tileset.hpp
+	<fstream>
+	<map>
+	<memory>
+	<string>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/System/Vector2.hpp>
+	"Image.hpp"
+	"Properties.hpp"
+	"TileData.hpp"
+
+1416864931 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/TileData.hpp
+	<memory>
+	<string>
+	"Properties.hpp"
+
+1417030137 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Tile.hpp
+	"Tileset.hpp"
+	"Shape.hpp"
+
+1417133098 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Shape.hpp
+	<vector>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1417030291 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/Object.hpp
+	<memory>
+	<string>
+	<SFML/Graphics/Color.hpp>
+	"Properties.hpp"
+	"Tileset.hpp"
+	"Shape.hpp"
+
+1417133614 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/ObjectGroup.hpp
+	<vector>
+	"ILayer.hpp"
+	"Image.hpp"
+	"Object.hpp"
+
+1416867246 /media/DD/C++/Projets/LudumDare31/TiledMapEngine/include/ParserUtils.hpp
+	<cstring>
+	<string>
+	<sstream>
+	<vector>
+	<zlib.h>
+
+1417101414 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/ImageLayer.cpp
+	"../include/ImageLayer.hpp"
+	"../include/Manager.hpp"
+
+1417388180 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Layer.cpp
+	"../include/Layer.hpp"
+	"../include/Map.hpp"
+
+1417133681 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Manager.cpp
+	"../include/Manager.hpp"
+
+1417133709 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Map.cpp
+	"../include/Map.hpp"
+
+1417030295 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Object.cpp
+	"../include/Object.hpp"
+	"../include/Map.hpp"
+
+1417133666 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/ObjectGroup.cpp
+	"../include/ObjectGroup.hpp"
+	"../include/Map.hpp"
+
+1416867270 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/ParserUtils.cpp
+	"../include/ParserUtils.hpp"
+
+1416861560 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Properties.cpp
+	"../include/Properties.hpp"
+
+1417303496 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Shape.cpp
+	"../include/Shape.hpp"
+
+1417030324 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Tile.cpp
+	"../include/Tile.hpp"
+	"../include/Map.hpp"
+
+1416863831 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/TileData.cpp
+	"../include/TileData.hpp"
+
+1417028022 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/src/Tileset.cpp
+	"../include/Tileset.hpp"
+	"../include/Manager.hpp"
+
