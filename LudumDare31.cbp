@@ -14,6 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="Application" />
+					<Add directory="GUI/" />
 				</Compiler>
 				<Linker>
 					<Add library="sfml-graphics" />
@@ -29,6 +30,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="Application" />
+					<Add directory="GUI/" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -92,6 +94,39 @@
 		<Unit filename="ExtLibs/pugiconfig.hpp" />
 		<Unit filename="ExtLibs/pugixml.cpp" />
 		<Unit filename="ExtLibs/pugixml.hpp" />
+		<Unit filename="SimpleGui/Button.cpp" />
+		<Unit filename="SimpleGui/Button.hpp" />
+		<Unit filename="SimpleGui/Callback.cpp" />
+		<Unit filename="SimpleGui/Callback.hpp" />
+		<Unit filename="SimpleGui/CheckBox.cpp" />
+		<Unit filename="SimpleGui/CheckBox.hpp" />
+		<Unit filename="SimpleGui/CheckBoxText.cpp" />
+		<Unit filename="SimpleGui/CheckBoxText.hpp" />
+		<Unit filename="SimpleGui/Container.cpp" />
+		<Unit filename="SimpleGui/Container.hpp" />
+		<Unit filename="SimpleGui/Event.cpp" />
+		<Unit filename="SimpleGui/Event.hpp" />
+		<Unit filename="SimpleGui/Label.cpp" />
+		<Unit filename="SimpleGui/Label.hpp" />
+		<Unit filename="SimpleGui/LabelBox.cpp" />
+		<Unit filename="SimpleGui/LabelBox.hpp" />
+		<Unit filename="SimpleGui/LineEdit.cpp" />
+		<Unit filename="SimpleGui/LineEdit.hpp" />
+		<Unit filename="SimpleGui/RadioBox.cpp" />
+		<Unit filename="SimpleGui/RadioBox.hpp" />
+		<Unit filename="SimpleGui/RadioBoxText.cpp" />
+		<Unit filename="SimpleGui/RadioBoxText.hpp" />
+		<Unit filename="SimpleGui/SimpleGui.hpp" />
+		<Unit filename="SimpleGui/Slider.cpp" />
+		<Unit filename="SimpleGui/Slider.hpp" />
+		<Unit filename="SimpleGui/Sprite.cpp" />
+		<Unit filename="SimpleGui/Sprite.hpp" />
+		<Unit filename="SimpleGui/Text.cpp" />
+		<Unit filename="SimpleGui/Text.hpp" />
+		<Unit filename="SimpleGui/TextBox.cpp" />
+		<Unit filename="SimpleGui/TextBox.hpp" />
+		<Unit filename="SimpleGui/Widget.cpp" />
+		<Unit filename="SimpleGui/Widget.hpp" />
 		<Unit filename="TiledMap/ILayer.cpp" />
 		<Unit filename="TiledMap/ILayer.hpp" />
 		<Unit filename="TiledMap/Image.cpp" />

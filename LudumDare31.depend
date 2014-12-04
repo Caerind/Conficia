@@ -5,11 +5,8 @@
 1417303759 /media/DD/C++/Projets/LudumDare31/Audio/MusicPlayer.hpp
 	<SFML/Audio/Music.hpp>
 
-1417458009 source:/media/DD/C++/Projets/LudumDare31/main.cpp
+1417471978 source:/media/DD/C++/Projets/LudumDare31/main.cpp
 	<SFML/Graphics.hpp>
-	<Thor/Animations.hpp>
-	<Thor/Resources.hpp>
-	<SFGUI/SFGUI.hpp>
 
 1415388542 source:/media/DD/C++/Projets/LudumDare31/TiledMapEngine/extlibs/pugixml/pugixml.cpp
 	"pugixml.hpp"
@@ -235,12 +232,11 @@
 	<SFML/System/Vector2.hpp>
 	<SFML/Window.hpp>
 
-1414761821 /media/DD/C++/Projets/LudumDare31/Application/ResourceManager.hpp
+1417473155 /media/DD/C++/Projets/LudumDare31/Application/ResourceManager.hpp
 	<map>
-	<memory>
+	<cassert>
 	<SFML/Graphics/Font.hpp>
 	<SFML/Graphics/Texture.hpp>
-	<Thor/Resources.hpp>
 
 1414761773 /media/DD/C++/Projets/LudumDare31/Application/Clock.hpp
 	<ctime>
@@ -303,7 +299,7 @@
 	<SFML/Graphics/Rect.hpp>
 	<SFML/Graphics/Transformable.hpp>
 
-1414761724 source:/media/DD/C++/Projets/LudumDare31/Application/ResourceManager.cpp
+1417473368 source:/media/DD/C++/Projets/LudumDare31/Application/ResourceManager.cpp
 	"ResourceManager.hpp"
 
 1414761731 source:/media/DD/C++/Projets/LudumDare31/Application/SettingsParser.cpp
