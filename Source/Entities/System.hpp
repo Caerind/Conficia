@@ -13,14 +13,13 @@ class System
 {
     public:
         System();
+        System(EntityManager* manager);
 
-        static std::string getType()
-        {
-            return "System";
-        }
+        bool entityHasRequiredComponents(Entity::Ptr e);
 
         void addEntity(Entity::Ptr e);
         void removeEntity(Entity::Ptr e);
+        bool contains(Entity::Ptr e);
 
         std::size_t getEntityCount();
 

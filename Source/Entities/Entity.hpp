@@ -6,19 +6,15 @@
 
 #include "Component.hpp"
 
+class EntityManager;
+
 class Entity
 {
     public:
         typedef std::shared_ptr<Entity> Ptr;
 
         Entity();
-
-        void activate();
-        void deactivate();
-        bool isActivated();
-
-        void remove();
-        bool isRemoved();
+        Entity(EntityManager* manager);
 
         template<typename T>
         T& addComponent(T* component);
@@ -36,19 +32,21 @@ class Entity
         template<typename T>
         T& getComponent();
 
-        std::size_t getComponentCount();
-
         std::size_t getId() const;
 
         ComponentArray& getComponents();
+
+        void setManager(EntityManager* manager);
+
+        void submitAddComponent();
+        void submitRemoveComponent();
 
     protected:
         static std::size_t IdCounter;
 
         std::size_t mId;
         ComponentArray mComponents;
-        bool mIsActivated;
-        bool mIsRemoved;
+        EntityManager* mManager;
 };
 
 
@@ -56,6 +54,7 @@ template<typename T>
 T& Entity::addComponent(T* component)
 {
     mComponents[T::getType()] = component;
+    submitAddComponent();
     return *component;
 }
 
@@ -75,6 +74,7 @@ void Entity::removeComponent()
     if (hasComponent<T>())
     {
         mComponents.erase(mComponents.find(T::getType()));
+        submitRemoveComponent();
     }
 }
 

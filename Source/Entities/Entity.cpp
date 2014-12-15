@@ -1,37 +1,16 @@
 #include "Entity.hpp"
+#include "EntityManager.hpp"
 
 std::size_t Entity::IdCounter = 0;
 
-Entity::Entity()
+Entity::Entity() : mManager(nullptr)
 {
     mId = IdCounter++;
-    mIsActivated = true;
-    mIsRemoved = false;
 }
 
-void Entity::activate()
+Entity::Entity(EntityManager* manager) : mManager(manager)
 {
-    mIsActivated = true;
-}
-
-void Entity::deactivate()
-{
-    mIsActivated = false;
-}
-
-bool Entity::isActivated()
-{
-    return mIsActivated;
-}
-
-void Entity::remove()
-{
-    mIsRemoved = true;
-}
-
-bool Entity::isRemoved()
-{
-    return mIsRemoved;
+    mId = IdCounter++;
 }
 
 bool Entity::hasComponent(std::string const& type)
@@ -44,11 +23,6 @@ void Entity::removeAllComponents()
     mComponents.clear();
 }
 
-std::size_t Entity::getComponentCount()
-{
-    return mComponents.size();
-}
-
 std::size_t Entity::getId() const
 {
     return mId;
@@ -57,4 +31,25 @@ std::size_t Entity::getId() const
 ComponentArray& Entity::getComponents()
 {
     return mComponents;
+}
+
+void Entity::setManager(EntityManager* manager)
+{
+    mManager = manager;
+}
+
+void Entity::submitAddComponent()
+{
+    if (mManager != nullptr)
+    {
+        mManager->entityAddComponent(mId);
+    }
+}
+
+void Entity::submitRemoveComponent()
+{
+    if (mManager != nullptr)
+    {
+        mManager->entityRemoveComponent(mId);
+    }
 }

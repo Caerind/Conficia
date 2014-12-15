@@ -1,29 +1,52 @@
 #include "System.hpp"
+#include "EntityManager.hpp"
 
 System::System()
 {
 }
 
-void System::addEntity(Entity::Ptr e)
+System::System(EntityManager* manager) : mManager(manager)
+{
+    mManager->addSystem(this);
+}
+
+bool System::entityHasRequiredComponents(Entity::Ptr e)
 {
     for (unsigned int i = 0; i < mFilter.size(); i++)
     {
         if (!e->hasComponent(mFilter[i]))
         {
-            return;
+            return false;
         }
     }
-    mEntities.push_back(e);
+    return true;
+}
+
+void System::addEntity(Entity::Ptr e)
+{
+    if (entityHasRequiredComponents(e))
+    {
+        mEntities.push_back(e);
+    }
 }
 
 void System::removeEntity(Entity::Ptr e)
 {
     auto itr = find(mEntities.begin(),mEntities.end(),e);
-
     if (itr != mEntities.end())
     {
         mEntities.erase(itr);
     }
+}
+
+bool System::contains(Entity::Ptr e)
+{
+    auto itr = find(mEntities.begin(),mEntities.end(),e);
+    if (itr != mEntities.end())
+    {
+        return true;
+    }
+    return false;
 }
 
 std::vector<std::string> System::getFilter()

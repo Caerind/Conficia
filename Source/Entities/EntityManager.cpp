@@ -6,7 +6,7 @@ EntityManager::EntityManager()
 
 Entity::Ptr EntityManager::createEntity()
 {
-    Entity::Ptr e = std::shared_ptr<Entity>(new Entity());
+    Entity::Ptr e = std::shared_ptr<Entity>(new Entity(this));
     mEntities[e->getId()] = e;
     entityAdded(e);
     return e;
@@ -15,6 +15,7 @@ Entity::Ptr EntityManager::createEntity()
 void EntityManager::addEntity(Entity::Ptr e)
 {
     mEntities[e->getId()] = e;
+    e->setManager(this);
     entityAdded(e);
 }
 
@@ -66,5 +67,19 @@ void EntityManager::entityRemoved(Entity::Ptr e)
     for (unsigned int i = 0; i < mSystems.size(); i++)
     {
         mSystems[i]->removeEntity(e);
+    }
+}
+
+void EntityManager::entityAddComponent(std::size_t id)
+{
+    for (unsigned int i = 0; i < mSystems.size(); i++)
+    {
+    }
+}
+
+void EntityManager::entityRemoveComponent(std::size_t id)
+{
+    for (unsigned int i = 0; i < mSystems.size(); i++)
+    {
     }
 }

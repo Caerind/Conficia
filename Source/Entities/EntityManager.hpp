@@ -20,6 +20,8 @@ class EntityManager
 
         void entityAdded(Entity::Ptr e);
         void entityRemoved(Entity::Ptr e);
+        void entityAddComponent(std::size_t id);
+        void entityRemoveComponent(std::size_t id);
 
     protected:
         std::map<std::size_t, Entity::Ptr> mEntities;
