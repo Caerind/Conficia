@@ -1,4 +1,7 @@
 bin/
 obj/
-system.log
 *~
+test*
+*.cbp
+*.layout
+*.depend
