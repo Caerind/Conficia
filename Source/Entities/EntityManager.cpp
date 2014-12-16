@@ -72,14 +72,28 @@ void EntityManager::entityRemoved(Entity::Ptr e)
 
 void EntityManager::entityAddComponent(std::size_t id)
 {
-    for (unsigned int i = 0; i < mSystems.size(); i++)
+    if (mEntities.find(mId) != mEntities.end())
     {
+        for (unsigned int i = 0; i < mSystems.size(); i++)
+        {
+            if (!mSystems[i]->contains(mEntities[mId]) && mSystems[i]->entityHasRequiredComponents(mEntities[mId]))
+            {
+                mSystems[i]->addEntity(mEntities[mId]);
+            }
+        }
     }
 }
 
 void EntityManager::entityRemoveComponent(std::size_t id)
 {
-    for (unsigned int i = 0; i < mSystems.size(); i++)
+    if (mEntities.find(mId) != mEntities.end())
     {
+        for (unsigned int i = 0; i < mSystems.size(); i++)
+        {
+            if (mSystems[i]->contains(mEntities[mId]) && !mSystems[i]->entityHasRequiredComponents(mEntities[mId]))
+            {
+                mSystems[i]->removeEntity(mEntities[mId]);
+            }
+        }
     }
 }
