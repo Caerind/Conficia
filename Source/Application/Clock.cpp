@@ -1,14 +1,20 @@
-#include "Clock.hpp"
+#include "../include/Clock.hpp"
 
 Clock::Clock()
 {
     update();
 }
 
-int Clock::getTime()
+int Clock::getTimeSecond()
 {
     update();
     return getHour() * 3600 + getMinute() * 60 + getSecond();
+}
+
+std::string Clock::getTime()
+{
+    update();
+    return std::string(std::to_string(getHour()) + ":" + std::to_string(getMinute()) + ":" + std::to_string(getSecond()));
 }
 
 void Clock::update()

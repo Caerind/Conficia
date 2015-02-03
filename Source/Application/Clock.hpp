@@ -9,7 +9,9 @@ class Clock
     public:
         Clock();
 
-        int getTime();
+        int getTimeSecond();
+
+        std::string getTime();
 
     protected:
 
