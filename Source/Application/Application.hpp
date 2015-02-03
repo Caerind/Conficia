@@ -12,6 +12,7 @@
 #include "StateManager.hpp"
 #include "Statistics.hpp"
 #include "Window.hpp"
+#include "Data.hpp"
 
 class Application
 {
@@ -28,6 +29,7 @@ class Application
         static StateManager& getStates();
         static Statistics& getStats();
         static Window& getWindow();
+        static Data& getData();
 
         static std::size_t getMajor();
         static std::size_t getMinor();
@@ -42,6 +44,7 @@ class Application
         static void setStateManager(StateManager* manager);
         static void setStatistics(Statistics* stats);
         static void setWindow(Window* window);
+        static void setData(Data* data);
 
         static void setMajor(std::size_t major);
         static void setMinor(std::size_t minor);
@@ -68,6 +71,7 @@ class Application
         StateManager* mStateManager;
         Statistics* mStatistics;
         Window* mWindow;
+        Data* mData;
 
         std::size_t mMajor;
         std::size_t mMinor;

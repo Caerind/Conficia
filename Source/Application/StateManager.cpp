@@ -80,6 +80,7 @@ void StateManager::applyPendingChanges()
 		{
 			case(Push):
 				mStates.push_back(createState(change.id));
+				mStates.back()->onActivate();
 				break;
 
 			case(Pop):

@@ -34,6 +34,9 @@ class StateManager
 		bool isEmpty() const;
 		std::size_t getSize() const;
 
+
+		void applyPendingChanges();
+
 	protected:
 		struct PendingChange
 		{
@@ -44,7 +47,6 @@ class StateManager
 
 	protected:
 		State::Ptr createState(std::string const& id);
-		void applyPendingChanges();
 
 		std::vector<State::Ptr> mStates;
 		std::vector<PendingChange> mPendingList;

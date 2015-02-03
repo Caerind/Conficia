@@ -4,6 +4,20 @@ Application* Application::Instance = nullptr;
 
 Application::Application()
 {
+    mAudio = new Audio();
+    mClock = new Clock();
+    mLang = new Lang();
+    mLog = new Log();
+    mResourceManager = new ResourceManager();
+    mStateManager = new StateManager();
+    mStatistics = new Statistics();
+    mWindow = new Window();
+    mData = new Data();
+
+    if (Instance == nullptr)
+    {
+        Instance = this;
+    }
 }
 
 Application& Application::instance()
@@ -53,6 +67,11 @@ Statistics& Application::getStats()
 Window& Application::getWindow()
 {
     return *instance().mWindow;
+}
+
+Data& Application::getData()
+{
+    return *instance().mData;
 }
 
 std::size_t Application::getMajor()
@@ -105,12 +124,6 @@ void Application::setResourceManager(ResourceManager* manager)
         instance().mResourceManager = manager;
 }
 
-void Application::setStateManager(StateManager* manager)
-{
-    if (manager != nullptr)
-        instance().mStateManager = manager;
-}
-
 void Application::setStatistics(Statistics* stats)
 {
     if (stats != nullptr)
@@ -121,6 +134,12 @@ void Application::setWindow(Window* window)
 {
     if (window != nullptr)
         instance().mWindow = window;
+}
+
+void Application::setData(Data* data)
+{
+    if (data != nullptr)
+        instance().mData = data;
 }
 
 void Application::setMajor(std::size_t major)

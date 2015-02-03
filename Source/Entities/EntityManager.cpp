@@ -72,13 +72,13 @@ void EntityManager::entityRemoved(Entity::Ptr e)
 
 void EntityManager::entityAddComponent(std::size_t id)
 {
-    if (mEntities.find(mId) != mEntities.end())
+    if (mEntities.find(id) != mEntities.end())
     {
         for (unsigned int i = 0; i < mSystems.size(); i++)
         {
-            if (!mSystems[i]->contains(mEntities[mId]) && mSystems[i]->entityHasRequiredComponents(mEntities[mId]))
+            if (!mSystems[i]->contains(mEntities[id]) && mSystems[i]->entityHasRequiredComponents(mEntities[id]))
             {
-                mSystems[i]->addEntity(mEntities[mId]);
+                mSystems[i]->addEntity(mEntities[id]);
             }
         }
     }
@@ -86,13 +86,13 @@ void EntityManager::entityAddComponent(std::size_t id)
 
 void EntityManager::entityRemoveComponent(std::size_t id)
 {
-    if (mEntities.find(mId) != mEntities.end())
+    if (mEntities.find(id) != mEntities.end())
     {
         for (unsigned int i = 0; i < mSystems.size(); i++)
         {
-            if (mSystems[i]->contains(mEntities[mId]) && !mSystems[i]->entityHasRequiredComponents(mEntities[mId]))
+            if (mSystems[i]->contains(mEntities[id]) && !mSystems[i]->entityHasRequiredComponents(mEntities[id]))
             {
-                mSystems[i]->removeEntity(mEntities[mId]);
+                mSystems[i]->removeEntity(mEntities[id]);
             }
         }
     }
