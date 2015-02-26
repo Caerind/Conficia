@@ -1,5 +1,5 @@
-#include "Application/Application.hpp"
-#include "../test/BasicState.hpp"
+#include "../Source/Application/Application.hpp"
+#include "BasicState.hpp"
 
 int main()
 {
