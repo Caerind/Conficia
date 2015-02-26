@@ -1,6 +1,9 @@
 #include "Lang.hpp"
 #include "Application.hpp"
 
+namespace cf
+{
+
 Lang::Lang()
 {
 }
@@ -50,4 +53,6 @@ std::string Lang::getValue(std::string const& index)
 std::string Lang::getLang()
 {
     return mLang;
+}
+
 }

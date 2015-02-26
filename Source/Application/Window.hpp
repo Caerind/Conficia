@@ -1,5 +1,5 @@
-#ifndef WINDOW_HPP
-#define WINDOW_HPP
+#ifndef CONFICIA_WINDOW_HPP
+#define CONFICIA_WINDOW_HPP
 
 #include <SFML/Graphics/Image.hpp>
 #include <SFML/Graphics/Rect.hpp>
@@ -9,6 +9,9 @@
 #include <SFML/Graphics/View.hpp>
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Window.hpp>
+
+namespace cf
+{
 
 class Window : public sf::RenderWindow
 {
@@ -83,4 +86,6 @@ class Window : public sf::RenderWindow
         bool mKeyRepeat;
 };
 
-#endif // WINDOW_HPP
+}
+
+#endif // CONFICIA_WINDOW_HPP

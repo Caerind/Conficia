@@ -1,5 +1,8 @@
 #include "Data.hpp"
 
+namespace cf
+{
+
 Data::Data()
 {
 }
@@ -14,3 +17,4 @@ std::string Data::get(std::string const& id)
     return mData[id];
 }
 
+}

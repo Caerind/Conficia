@@ -1,9 +1,12 @@
 #ifndef SOUND_HPP
-#define SOUND_HPP
+#define CONFICIA_SOUND_HPP
 
 #include <string>
 
 #include <SFML/Audio/Sound.hpp>
+
+namespace cf
+{
 
 class SoundManager;
 
@@ -23,4 +26,6 @@ class Sound : public sf::Sound
         SoundManager* mManager;
 };
 
-#endif // SOUND_HPP
+}
+
+#endif // CONFICIA_SOUND_HPP

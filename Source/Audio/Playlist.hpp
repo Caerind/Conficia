@@ -1,11 +1,14 @@
-#ifndef PLAYLIST_HPP
-#define PLAYLIST_HPP
+#ifndef CONFICIA_PLAYLIST_HPP
+#define CONFICIA_PLAYLIST_HPP
 
 #include <vector>
 
 #include <SFML/Audio/SoundSource.hpp>
 
 #include "Music.hpp"
+
+namespace cf
+{
 
 class Playlist : public sf::SoundSource
 {
@@ -50,4 +53,6 @@ class Playlist : public sf::SoundSource
         unsigned int mMusicPlayed;
 };
 
-#endif // PLAYLIST_HPP
+}
+
+#endif // CONFICIA_PLAYLIST_HPP

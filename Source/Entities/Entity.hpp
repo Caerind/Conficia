@@ -1,10 +1,13 @@
-#ifndef ENTITY_HPP
-#define ENTITY_HPP
+#ifndef CONFICIA_ENTITY_HPP
+#define CONFICIA_ENTITY_HPP
 
 #include <memory>
 #include <cassert>
 
 #include "Component.hpp"
+
+namespace cf
+{
 
 class EntityManager;
 
@@ -86,4 +89,6 @@ T& Entity::getComponent()
     return static_cast<T&>(*mComponents[T::getType()]);
 }
 
-#endif // ENTITY_HPP
+}
+
+#endif // CONFICIA_ENTITY_HPP

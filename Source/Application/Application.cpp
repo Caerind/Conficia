@@ -1,5 +1,8 @@
 #include "Application.hpp"
 
+namespace cf
+{
+
 Application* Application::Instance = nullptr;
 
 Application::Application()
@@ -218,4 +221,6 @@ void Application::render()
     #endif
 
     mWindow->display();
+}
+
 }

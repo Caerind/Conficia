@@ -1,6 +1,9 @@
 #include "ResourceManager.hpp"
 #include "Application.hpp"
 
+namespace cf
+{
+
 ResourceManager::ResourceManager()
 {
 }
@@ -67,4 +70,6 @@ void ResourceManager::releaseFont(std::string const& filename)
     {
         mFonts.erase(mFonts.find(filename));
     }
+}
+
 }

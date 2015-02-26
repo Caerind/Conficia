@@ -1,6 +1,9 @@
 #include "SoundManager.hpp"
 #include "Sound.hpp"
 
+namespace cf
+{
+
 SoundManager::SoundManager()
 {
 }
@@ -80,4 +83,6 @@ void SoundManager::update()
     {
         mSounds.clear();
     }
+}
+
 }

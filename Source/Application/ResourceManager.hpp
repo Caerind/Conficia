@@ -1,11 +1,14 @@
-#ifndef RESOURCEMANAGER_HPP
-#define RESOURCEMANAGER_HPP
+#ifndef CONFICIA_RESOURCEMANAGER_HPP
+#define CONFICIA_RESOURCEMANAGER_HPP
 
 #include <map>
 #include <string>
 
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
+
+namespace cf
+{
 
 class ResourceManager
 {
@@ -29,4 +32,6 @@ class ResourceManager
         std::map<std::string,sf::Font> mFonts;
 };
 
-#endif // RESOURCEMANAGER_HPP
+}
+
+#endif // CONFICIA_RESOURCEMANAGER_HPP

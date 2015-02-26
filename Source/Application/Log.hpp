@@ -1,7 +1,10 @@
-#ifndef LOG_HPP
-#define LOG_HPP
+#ifndef CONFICIA_LOG_HPP
+#define CONFICIA_LOG_HPP
 
 #include <fstream>
+
+namespace cf
+{
 
 class Log
 {
@@ -46,4 +49,6 @@ class Log
         Log::Type mType;
 };
 
-#endif // LOG_HPP
+}
+
+#endif // CONFICIA_LOG_HPP

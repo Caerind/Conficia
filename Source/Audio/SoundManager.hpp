@@ -1,5 +1,5 @@
-#ifndef SOUNDMANAGER_HPP
-#define SOUNDMANAGER_HPP
+#ifndef CONFICIA_SOUNDMANAGER_HPP
+#define CONFICIA_SOUNDMANAGER_HPP
 
 #include <string>
 #include <map>
@@ -8,6 +8,9 @@
 
 #include <SFML/Audio/Sound.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
+
+namespace cf
+{
 
 class Sound;
 
@@ -29,4 +32,6 @@ class SoundManager
         std::vector<std::unique_ptr<Sound>> mSounds;
 };
 
-#endif // SOUNDMANAGER_HPP
+}
+
+#endif // CONFICIA_SOUNDMANAGER_HPP

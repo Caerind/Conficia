@@ -1,6 +1,9 @@
 #include "State.hpp"
 #include "StateManager.hpp"
 
+namespace cf
+{
+
 std::string State::getID()
 {
     return "State";
@@ -52,4 +55,6 @@ void State::requestPop()
 void State::requestClear()
 {
     mManager.clearStates();
+}
+
 }

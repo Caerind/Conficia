@@ -1,5 +1,5 @@
-#ifndef APPLICATION_HPP_INCLUDED
-#define APPLICATION_HPP_INCLUDED
+#ifndef CONFICIA_APPLICATION_HPP_INCLUDED
+#define CONFICIA_APPLICATION_HPP_INCLUDED
 
 #include "Application.hpp"
 #include "Audio.hpp"
@@ -13,4 +13,4 @@
 #include "Window.hpp"
 #include "Data.hpp"
 
-#endif // APPLICATION_HPP_INCLUDED
+#endif // CONFICIA_APPLICATION_HPP_INCLUDED

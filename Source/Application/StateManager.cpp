@@ -2,6 +2,9 @@
 
 #include <cassert>
 
+namespace cf
+{
+
 StateManager::StateManager()
 {
 }
@@ -102,4 +105,6 @@ void StateManager::applyPendingChanges()
 		}
 	}
 	mPendingList.clear();
+}
+
 }

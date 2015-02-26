@@ -1,8 +1,11 @@
-#ifndef ENTITYMANAGER_HPP
-#define ENTITYMANAGER_HPP
+#ifndef CONFICIA_ENTITYMANAGER_HPP
+#define CONFICIA_ENTITYMANAGER_HPP
 
 #include "Entity.hpp"
 #include "System.hpp"
+
+namespace cf
+{
 
 class EntityManager
 {
@@ -28,4 +31,6 @@ class EntityManager
         std::vector<System*> mSystems;
 };
 
-#endif // ENTITYMANAGER_HPP
+}
+
+#endif // CONFICIA_ENTITYMANAGER_HPP

@@ -1,10 +1,13 @@
-#ifndef AUDIO_HPP
-#define AUDIO_HPP
+#ifndef CONFICIA_AUDIO_HPP
+#define CONFICIA_AUDIO_HPP
 
 #include <string>
 
 #include "../Audio/Playlist.hpp"
 #include "../Audio/SoundManager.hpp"
+
+namespace cf
+{
 
 class Audio
 {
@@ -24,4 +27,6 @@ class Audio
         SoundManager mSounds;
 };
 
-#endif // AUDIO_HPP
+}
+
+#endif // CONFICIA_AUDIO_HPP

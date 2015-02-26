@@ -1,10 +1,13 @@
-#ifndef STATE_HPP
-#define STATE_HPP
+#ifndef CONFICIA_STATE_HPP
+#define CONFICIA_STATE_HPP
 
 #include <memory>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Event.hpp>
+
+namespace cf
+{
 
 class StateManager;
 
@@ -36,4 +39,6 @@ class State
         StateManager& mManager;
 };
 
-#endif // STATE_HPP
+}
+
+#endif // CONFICIA_STATE_HPP

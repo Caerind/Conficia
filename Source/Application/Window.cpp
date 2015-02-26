@@ -1,6 +1,9 @@
 #include "Window.hpp"
 #include "Application.hpp"
 
+namespace cf
+{
+
 Window::Window()
 {
     mVerticalSync = false;
@@ -181,4 +184,6 @@ bool Window::loadIcon(std::string const& filename)
         return true;
     }
     return false;
+}
+
 }

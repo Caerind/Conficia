@@ -1,5 +1,8 @@
 #include "Playlist.hpp"
 
+namespace cf
+{
+
 Playlist::Playlist()
 {
 }
@@ -140,4 +143,6 @@ float Playlist::getAttenuation() const
 sf::SoundSource::Status Playlist::getStatus() const
 {
     return mMusic.getStatus();
+}
+
 }

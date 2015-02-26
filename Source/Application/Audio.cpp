@@ -1,6 +1,9 @@
 #include "Audio.hpp"
 #include "Application.hpp"
 
+namespace cf
+{
+
 Audio::Audio()
 {
 }
@@ -35,4 +38,6 @@ Playlist& Audio::getPlaylist()
 SoundManager& Audio::getSoundManager()
 {
     return mSounds;
+}
+
 }

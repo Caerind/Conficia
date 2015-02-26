@@ -1,11 +1,14 @@
-#ifndef SYSTEM_HPP
-#define SYSTEM_HPP
+#ifndef CONFICIA_SYSTEM_HPP
+#define CONFICIA_SYSTEM_HPP
 
 #include <vector>
 #include <string>
 #include <algorithm>
 
 #include "Entity.hpp"
+
+namespace cf
+{
 
 class EntityManager;
 
@@ -39,4 +42,6 @@ class System
         EntityManager* mManager;
 };
 
-#endif // SYSTEM_HPP
+}
+
+#endif // CONFICIA_SYSTEM_HPP

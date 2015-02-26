@@ -1,5 +1,5 @@
-#ifndef APPLICATION_HPP
-#define APPLICATION_HPP
+#ifndef CONFICIA_APPLICATION_HPP
+#define CONFICIA_APPLICATION_HPP
 
 #include <iostream>
 #include <string>
@@ -13,6 +13,9 @@
 #include "Statistics.hpp"
 #include "Window.hpp"
 #include "Data.hpp"
+
+namespace cf
+{
 
 class Application
 {
@@ -79,4 +82,6 @@ class Application
         std::string mTitle;
 };
 
-#endif // APPLICATION_HPP
+}
+
+#endif // CONFICIA_APPLICATION_HPP

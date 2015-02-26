@@ -1,8 +1,11 @@
-#ifndef CLOCK_HPP
-#define CLOCK_HPP
+#ifndef CONFICIA_CLOCK_HPP
+#define CONFICIA_CLOCK_HPP
 
 #include <ctime>
 #include <string>
+
+namespace cf
+{
 
 class Clock
 {
@@ -26,4 +29,6 @@ class Clock
         char mSecond[5];
 };
 
-#endif // CLOCK_HPP
+}
+
+#endif // CONFICIA_CLOCK_HPP

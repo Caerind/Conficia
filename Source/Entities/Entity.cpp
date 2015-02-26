@@ -1,6 +1,9 @@
 #include "Entity.hpp"
 #include "EntityManager.hpp"
 
+namespace cf
+{
+
 std::size_t Entity::IdCounter = 0;
 
 Entity::Entity() : mManager(nullptr)
@@ -52,4 +55,6 @@ void Entity::submitRemoveComponent()
     {
         mManager->entityRemoveComponent(mId);
     }
+}
+
 }

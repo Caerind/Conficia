@@ -1,5 +1,8 @@
 #include "Music.hpp"
 
+namespace cf
+{
+
 Music::Music()
 {
 }
@@ -69,4 +72,6 @@ void Music::setFilename(std::string const& filename)
 std::string Music::getFilename() const
 {
     return mFilename;
+}
+
 }

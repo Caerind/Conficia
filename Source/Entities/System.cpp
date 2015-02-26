@@ -1,6 +1,9 @@
 #include "System.hpp"
 #include "EntityManager.hpp"
 
+namespace cf
+{
+
 System::System()
 {
 }
@@ -57,4 +60,6 @@ std::vector<std::string> System::getFilter()
 void System::setManager(EntityManager* manager)
 {
     mManager = manager;
+}
+
 }

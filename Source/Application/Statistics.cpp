@@ -1,5 +1,8 @@
 #include "Statistics.hpp"
 
+namespace cf
+{
+
 Statistics::Statistics()
 {
 }
@@ -26,4 +29,6 @@ void Statistics::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
     states.transform *= getTransform();
     target.draw(mText,states);
+}
+
 }

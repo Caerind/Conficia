@@ -1,6 +1,9 @@
 #include "Sound.hpp"
 #include "SoundManager.hpp"
 
+namespace cf
+{
+
 Sound::Sound() : sf::Sound(), mManager(nullptr)
 {
 }
@@ -37,4 +40,6 @@ void Sound::setManager(SoundManager* manager)
 SoundManager* Sound::getManager() const
 {
     return mManager;
+}
+
 }

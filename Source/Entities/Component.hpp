@@ -1,8 +1,11 @@
-#ifndef COMPONENT_HPP
-#define COMPONENT_HPP
+#ifndef CONFICIA_COMPONENT_HPP
+#define CONFICIA_COMPONENT_HPP
 
 #include <map>
 #include <string>
+
+namespace cf
+{
 
 class Component
 {
@@ -18,5 +21,6 @@ class Component
 
 typedef std::map<std::string,Component*> ComponentArray;
 
+}
 
-#endif // COMPONENT_HPP
+#endif // CONFICIA_COMPONENT_HPP

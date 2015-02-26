@@ -1,9 +1,12 @@
-#ifndef LANG_HPP
-#define LANG_HPP
+#ifndef CONFICIA_LANG_HPP
+#define CONFICIA_LANG_HPP
 
 #include <fstream>
 #include <map>
 #include <string>
+
+namespace cf
+{
 
 class Lang
 {
@@ -21,4 +24,6 @@ class Lang
         std::map<std::string,std::string> mValues;
 };
 
-#endif // LANG_HPP
+}
+
+#endif // CONFICIA_LANG_HPP

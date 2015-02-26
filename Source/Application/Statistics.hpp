@@ -1,5 +1,5 @@
-#ifndef STATISTICS_HPP
-#define STATISTICS_HPP
+#ifndef CONFICIA_STATISTICS_HPP
+#define CONFICIA_STATISTICS_HPP
 
 #include <string>
 
@@ -9,6 +9,9 @@
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
+
+namespace cf
+{
 
 class Statistics : public sf::Drawable, public sf::Transformable
 {
@@ -28,4 +31,6 @@ class Statistics : public sf::Drawable, public sf::Transformable
         std::size_t mNumFrames;
 };
 
-#endif // STATISTICS_HPP
+}
+
+#endif // CONFICIA_STATISTICS_HPP

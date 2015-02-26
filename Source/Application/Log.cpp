@@ -1,6 +1,9 @@
 #include "Log.hpp"
 #include "Application.hpp"
 
+namespace cf
+{
+
 Log::Log()
 {
     mType = Log::INFO;
@@ -50,4 +53,6 @@ void Log::logType()
 void Log::logText(std::string const& text)
 {
     mFile << text;
+}
+
 }

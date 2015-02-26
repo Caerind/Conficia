@@ -1,5 +1,8 @@
 #include "../include/Clock.hpp"
 
+namespace cf
+{
+
 Clock::Clock()
 {
     update();
@@ -41,4 +44,6 @@ int Clock::getMinute()
 int Clock::getSecond()
 {
     return std::stoi(mSecond);
+}
+
 }

@@ -1,8 +1,11 @@
-#ifndef MUSIC_HPP
-#define MUSIC_HPP
+#ifndef CONFICIA_MUSIC_HPP
+#define CONFICIA_MUSIC_HPP
 
 #include <string>
 #include <SFML/Audio/Music.hpp>
+
+namespace cf
+{
 
 class Music : public sf::Music
 {
@@ -25,4 +28,6 @@ class Music : public sf::Music
         unsigned int mTimesLeft;
 };
 
-#endif // MUSIC_HPP
+}
+
+#endif // CONFICIA_MUSIC_HPP

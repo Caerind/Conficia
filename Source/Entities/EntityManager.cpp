@@ -1,5 +1,8 @@
 #include "EntityManager.hpp"
 
+namespace cf
+{
+
 EntityManager::EntityManager()
 {
 }
@@ -96,4 +99,6 @@ void EntityManager::entityRemoveComponent(std::size_t id)
             }
         }
     }
+}
+
 }

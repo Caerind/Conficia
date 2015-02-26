@@ -1,8 +1,11 @@
-#ifndef DATA_HPP
-#define DATA_HPP
+#ifndef CONFICIA_DATA_HPP
+#define CONFICIA_DATA_HPP
 
 #include <map>
 #include <string>
+
+namespace cf
+{
 
 class Data
 {
@@ -16,4 +19,6 @@ class Data
         std::map<std::string,std::string> mData;
 };
 
-#endif // DATA_HPP
+}
+
+#endif // CONFICIA_DATA_HPP

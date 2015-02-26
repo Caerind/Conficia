@@ -1,11 +1,14 @@
-#ifndef STATEMANAGER_HPP
-#define STATEMANAGER_HPP
+#ifndef CONFICIA_STATEMANAGER_HPP
+#define CONFICIA_STATEMANAGER_HPP
 
 #include <functional>
 #include <map>
 #include <vector>
 
 #include "State.hpp"
+
+namespace cf
+{
 
 class StateManager
 {
@@ -63,4 +66,6 @@ void StateManager::registerState(std::string const& id)
 	};
 }
 
-#endif // STATEMANAGER_HPP
+}
+
+#endif // CONFICIA_STATEMANAGER_HPP
