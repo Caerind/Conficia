@@ -9,7 +9,7 @@ std::string BasicState::getID()
 BasicState::BasicState(cf::StateManager& manager)
 : State(manager)
 {
-    mTexture.loadFromFile("test.png");
+    mTexture.loadFromFile("test/test.png");
 
     auto e = mEntities.createEntity();
     e->addComponent<SpriteComponent>(new SpriteComponent()).setTexture(mTexture);
