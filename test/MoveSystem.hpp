@@ -6,7 +6,7 @@
 #include "MoveComponent.hpp"
 #include "SpriteComponent.hpp"
 
-class MoveSystem : public System
+class MoveSystem : public cf::System
 {
     public:
         MoveSystem()
@@ -15,7 +15,7 @@ class MoveSystem : public System
             mFilter.push_back(MoveComponent::getType());
         }
 
-        MoveSystem(EntityManager* manager) : System(manager)
+        MoveSystem(cf::EntityManager* manager) : System(manager)
         {
             mFilter.push_back(SpriteComponent::getType());
             mFilter.push_back(MoveComponent::getType());
@@ -26,7 +26,7 @@ class MoveSystem : public System
             for (unsigned int i = 0; i < mEntities.size(); i++)
             {
                 float s = mEntities[i]->getComponent<MoveComponent>().getSpeed();
-                mEntities[i]->getComponent<SpriteComponent>().getSprite().move(sf::Vector2f(s * dt.asSeconds(), s* dt.asSeconds()));
+                mEntities[i]->getComponent<SpriteComponent>().move(sf::Vector2f(s * dt.asSeconds(), s* dt.asSeconds()));
             }
         }
 };

@@ -5,7 +5,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "SpriteComponent.hpp"
 
-class SpriteSystem : public System
+class SpriteSystem : public cf::System
 {
     public:
         SpriteSystem()
@@ -13,7 +13,7 @@ class SpriteSystem : public System
             mFilter.push_back(SpriteComponent::getType());
         }
 
-        SpriteSystem(EntityManager* manager) : System(manager)
+        SpriteSystem(cf::EntityManager* manager) : System(manager)
         {
             mFilter.push_back(SpriteComponent::getType());
         }
@@ -24,7 +24,7 @@ class SpriteSystem : public System
             {
                 if (entityHasRequiredComponents(mEntities[i]))
                 {
-                    window.draw(mEntities[i]->getComponent<SpriteComponent>().getSprite());
+                    window.draw(mEntities[i]->getComponent<SpriteComponent>());
                 }
             }
         }

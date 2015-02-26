@@ -3,7 +3,7 @@
 
 #include "../Source/Entities/Component.hpp"
 
-class MoveComponent : public Component
+class MoveComponent : public cf::Component
 {
     public:
         MoveComponent() {}

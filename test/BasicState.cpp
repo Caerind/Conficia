@@ -6,13 +6,13 @@ std::string BasicState::getID()
     return "BasicState";
 }
 
-BasicState::BasicState(StateManager& manager)
+BasicState::BasicState(cf::StateManager& manager)
 : State(manager)
 {
     mTexture.loadFromFile("test.png");
 
     auto e = mEntities.createEntity();
-    e->addComponent<SpriteComponent>(new SpriteComponent()).getSprite().setTexture(mTexture);
+    e->addComponent<SpriteComponent>(new SpriteComponent()).setTexture(mTexture);
     e->addComponent<MoveComponent>(new MoveComponent()).setSpeed(10.f);
 
     mEntities.addSystem(&mSpriteSystem);
@@ -23,7 +23,7 @@ bool BasicState::handleEvent(sf::Event const& event)
 {
     if (event.type == sf::Event::Closed)
     {
-        Application::getWindow().close();
+        cf::Application::getWindow().close();
     }
     return true;
 }
@@ -36,5 +36,5 @@ bool BasicState::update(sf::Time dt)
 
 void BasicState::render()
 {
-    mSpriteSystem.render(Application::getWindow());
+    mSpriteSystem.render(cf::Application::getWindow());
 }

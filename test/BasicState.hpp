@@ -12,7 +12,7 @@
 #include "MoveComponent.hpp"
 #include "SpriteComponent.hpp"
 
-class BasicState : public State
+class BasicState : public cf::State
 {
     public:
         static std::string getID();
@@ -20,7 +20,7 @@ class BasicState : public State
         typedef std::unique_ptr<BasicState> Ptr;
 
     public:
-        BasicState(StateManager& manager);
+        BasicState(cf::StateManager& manager);
 
         bool handleEvent(sf::Event const& event);
         bool update(sf::Time dt);
@@ -28,10 +28,10 @@ class BasicState : public State
 
     private:
         sf::Texture mTexture;
-        EntityManager mEntities;
+        sf::Clock mClock;
+        cf::EntityManager mEntities;
         SpriteSystem mSpriteSystem;
         MoveSystem mMoveSystem;
-        sf::Clock mClock;
 };
 
 #endif // BASICSTATE_HPP

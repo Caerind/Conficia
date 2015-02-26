@@ -5,7 +5,7 @@
 
 #include "../Source/Entities/Component.hpp"
 
-class SpriteComponent : public Component
+class SpriteComponent : public cf::Component, public sf::Sprite
 {
     public:
         SpriteComponent()
@@ -16,14 +16,6 @@ class SpriteComponent : public Component
         {
             return "SpriteComponent";
         }
-
-        sf::Sprite& getSprite()
-        {
-            return mSprite;
-        }
-
-    protected:
-        sf::Sprite mSprite;
 };
 
 #endif // SPRITECOMPONENT_HPP

@@ -3,7 +3,7 @@
 
 int main()
 {
-    Application app;
+    cf::Application app;
     app.getWindow().create(800,600,sf::Style::Close);
     app.getStates().registerState<BasicState>(BasicState::getID());
     app.getStates().pushState(BasicState::getID());

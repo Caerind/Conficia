@@ -29,7 +29,7 @@ bool Log::openFile(std::string const& filename)
 
 void Log::logTime()
 {
-    mFile << "[" << std::to_string(Application::getClock().getTime()) << "]";
+    mFile << "[" << Application::getClock().getTime() << "]";
 }
 
 void Log::logType()
