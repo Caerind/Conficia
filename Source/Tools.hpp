@@ -1,0 +1,6 @@
+#ifndef CONFICIA_TOOLS_HPP_INCLUDED
+#define CONFICIA_TOOLS_HPP_INCLUDED
+
+#include "Tools/Compress.hpp"
+
+#endif // CONFICIA_TOOLS_HPP_INCLUDED
