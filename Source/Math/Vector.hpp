@@ -1,6 +1,9 @@
 #ifndef CONFICIA_VECTOR_HPP
 #define CONFICIA_VECTOR_HPP
 
+#include <SFML/System/Vector2.hpp>
+#include "Trigonometry.hpp"
+
 namespace cf
 {
 

@@ -4,6 +4,7 @@
 #include "Application.hpp"
 #include "Audio.hpp"
 #include "Entities.hpp"
+#include "GUI.hpp"
 #include "Math.hpp"
 #include "Network.hpp"
 #include "Time.hpp"

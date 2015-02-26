@@ -1,6 +1,8 @@
 #ifndef CONFICIA_TRIGONOMETRY_HPP
 #define CONFICIA_TRIGONOMETRY_HPP
 
+#include <cmath>
+
 namespace cf
 {
 
